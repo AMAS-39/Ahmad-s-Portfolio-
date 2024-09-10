@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Shwan | Software Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="chatbot.js"></script>
+    <script src="https://unpkg.com/compromise@13.11.3/builds/compromise.min.js"></script>
+
+ 
+
+
+
+</head>
+<body>
+ 
+
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="theme-toggle">
+            <i class="fas fa-sun" id="sun-icon"></i>
+            <i class="fas fa-moon" id="moon-icon"></i>
+        </div>
+    
+        <div class="burger-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+    
+    
+
+    <section id="home" class="parallax home-section">
+        <div class="home-content">
+            <h1>Hello, I'm <span class="highlight">Ahmad Shwan</span></h1>
+            <p>A Passionate <span class="highlight">Software Developer</span></p>
+            <div class="typing-effect">
+                <p><span id="typing-text"></span><span class="cursor">|</span></p>
+            </div>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+        <div class="floating-code">
+            <pre>
+<code>
+function greet() {
+    console.log("Welcome to Ahmad's Portfolio!");
+}
+
+greet();
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images/image.png" alt="About Ahmad">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I’m Ahmad, a passionate software developer with a strong focus on AI and web development. My expertise spans across both frontend and backend technologies, enabling me to craft seamless digital experiences. My love for solving complex problems drives my innovation in creating efficient, scalable solutions.</p>
+                <a href="#projects" class="btn">See My Projects</a>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="skills" class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <i class="fab fa-html5"></i>
+                <h3>HTML5</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <h3>CSS3</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <i class="fab fa-js"></i>
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="*">All</button>
+            <button class="filter-btn" data-filter=".web">Web Development</button>
+            <button class="filter-btn" data-filter=".ai">AI Projects</button>
+            <button class="filter-btn" data-filter=".mobile">Mobile App Development</button>
+        </div>
+    
+        <!-- Project Grid (using Isotope.js) -->
+        <div class="project-grid">
+            <div class="project-item web">
+                <div class="project-img">
+                    <img class="lazy" src="images/project1.jpg" alt="Web Project 1">
+                </div>
+                <div class="project-overlay">
+                    <h3>Web Development Project</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+            </div>
+            <div class="project-item ai">
+                <div class="project-img">
+                    <img class="lazy" src="images/project2.jpg" alt="AI Project 1">
+                </div>
+                <div class="project-overlay">
+                    <h3>AI Project</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+            </div>
+            <div class="project-item mobile">
+                <div class="project-img">
+                    <img class="lazy" src="images/project3.jpg" alt="Mobile Project 1">
+                </div>
+                <div class="project-overlay">
+                    <h3>Mobile App Development</h3>
+                    <p>Brief description of the project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+
+       <!-- 3D Scans Section -->
+       <section id="3d-scans" class="scans-section">
+        <h2>My 3D Scans</h2>
+        <div class="scans-container">
+            <!-- First 3D Scan -->
+            <div class="scan-item">
+                <iframe src="https://poly.cam/capture/c3adeda8-90e8-45ea-b18c-563001d6c09c/embed" title="polycam capture viewer" style="height:100%;width:100%;max-height:300px;"></iframe>
+            </div>
+            <!-- Second 3D Scan -->
+            <div class="scan-item">
+                <iframe src="https://poly.cam/capture/70daf81a-2406-4af6-8a4d-80d4600414f7/embed" title="polycam capture viewer" style="height:100%;width:100%;max-height:300px;"></iframe>
+            </div>
+            <!-- Third 3D Scan -->
+            <div class="scan-item">
+                <iframe src="https://poly.cam/capture/A143A4E5-150F-4B5B-AA6C-3EA8F859056F/embed" title="polycam capture viewer" style="height:100%;width:100%;max-height:300px;"></iframe>
+            </div>
+        </div>
+        <div class="see-all-btn">
+            <a href="all-3d-scans.html" class="btn">See All Scans</a>
+        </div>
+    </section>
+
+
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>What People Say</h2>
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <div class="testimonial-card">
+                    <p>"Ahmad's work on our project was phenomenal! His attention to detail and dedication to the craft are unmatched."</p>
+                    <h4>– John Doe, CEO of XYZ Corp</h4>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="testimonial-card">
+                    <p>"A true professional who delivered exceptional results. Ahmad exceeded all expectations."</p>
+                    <h4>– Jane Smith, Tech Lead at ABC Solutions</h4>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="testimonial-card">
+                    <p>"Working with Ahmad was a seamless experience. He understood our requirements and brought our vision to life."</p>
+                    <h4>– Michael Brown, Founder of TechMinds</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/{your_form_id}" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="contact-details">
+            <p><i class="fas fa-envelope"></i> ahmadshwanaswad@gmail.com</p>
+            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ahmad-shwan-b304b527b/" target="_blank">LinkedIn</a></p>
+            <p><i class="fas fa-phone"></i> +964 07507180285</p>
+        </div>
+    </section>
+
+    <div class="chatbot-container">
+        <div class="chatbot-icon" id="chatbot-icon">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chatbot" id="chatbot">
+            <div class="chatbot-header">
+                <h4>Chat with Ahmad's AI Assistant</h4>
+                <span id="close-chatbot">&times;</span>
+            </div>
+            <div class="chatbot-body" id="chatbot-body">
+                <div class="chatbot-messages" id="chatbot-messages"></div>
+                <div class="chatbot-input-container">
+                    <input type="text" id="chatbot-input" placeholder="Ask me anything..." autocomplete="off"/>
+                    <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About Me</h4>
+                <p>Ahmad Shwan is a developer specializing in web and AI development. Passionate about creating efficient, elegant solutions.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:ahmadshwan@example.com">ahmadshwan@example.com</a></p>
+                <p>Phone: +964 123 456 7890</p>
+            </div>
+            <div class="footer-column">
+                <h4>Follow Me</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ahmad Shwan. All rights reserved.</p>
+            <button id="back-to-top" class="back-to-top"><i class="fas fa-chevron-up"></i></button>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+    <!-- Include HTML mode -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js"></script>
+    <!-- Include CSS mode -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js"></script>
+    <!-- Include Python mode -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/python/python.min.js"></script>
+</body>
+</html>
